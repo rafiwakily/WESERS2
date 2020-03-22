@@ -17,7 +17,7 @@
 
     if ((isset($_GET["Username"])) && (isset($_GET["Password"]))) {
 
-        $isUserThere = $connection->prepare("SELECT * FROM ppl WHERE Username=?");
+        $isUserThere = $connection->prepare("SELECT * FROM people WHERE Username=?");
         $isUserThere->bind_param("s", $_GET["Username"]);
         $isUserThere->execute();
 
@@ -39,7 +39,7 @@
 
     ?>
 
-    <form action="login_page.php" method="get">
+    <form action="login.php" method="get">
         username: <input type="text" name="Username">
         password: <input type="text" name="Password">
         <input type="submit" value="login" name="login">
