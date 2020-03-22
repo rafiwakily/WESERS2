@@ -32,7 +32,7 @@
                 print "Nice try.. ";
             }
         } else {
-            print "Your username does not exist in our databse";
+            print "user does not exist/ password is wrong";
         }
     }
     $connection->close();
