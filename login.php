@@ -24,15 +24,15 @@
         $result = $isUserThere->get_result();
 
         if ($result->num_rows > 0) {
-            print "You DO exist in our DATABASE. We will check next if your password is correct !!<br>";
+            print "Your username does not exist! make sure that username and password match correctly !!<br>";
             $row = mysqli_fetch_assoc($result);
             if ($row['Password'] == $_GET["Password"]) {
                 print "You have the correct password";
             } else {
-                print "Nice try, you hacker ... ";
+                print "Nice try.. ";
             }
         } else {
-            print "You do not EXIST for us";
+            print "Your username does not exist in our databse";
         }
     }
     $connection->close();
