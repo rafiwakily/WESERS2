@@ -16,7 +16,7 @@
         isset($_GET["Password"])
     ) {
         print "You are about to register .... but not yet<BR>";
-        $isUserThere = $connection->prepare("SELECT * FROM ppl WHERE UserName=?");
+        $isUserThere = $connection->prepare("SELECT * FROM people WHERE Username=?");
         $isUserThere->bind_param("s", $_GET["Username"]);
         $isUserThere->execute();
 
@@ -25,10 +25,10 @@
             print "Your username is already taken ! <BR>";
         } else {
 
-            $stmt = $connection->prepare("INSERT INTO ppl(First_Name,Second_Name,Age,UserName,Password,Nationality) VALUES(?,?,?,?,?,?)");
+            $stmt = $connection->prepare("INSERT INTO people(First_Name,Second_Name,Age,UserName,Password,Nationality) VALUES(?,?,?,?,?,?)");
             $stmt->bind_param("ssissi", $_GET["FirstName"], $_GET["LastName"], $_GET["Age"], $_GET["Username"], $_GET["Password"], $_GET["Country"]);
             $stmt->execute();
-            print "Yaaay you have registered. Check the database <BR>";
+            print " you have registered. Check the database <BR>";
         }
     } else {
 
