@@ -24,13 +24,11 @@
         $result = $isUserThere->get_result();
 
         if ($result->num_rows > 0) {
-            print "Your username does not exist! make sure that username and password match correctly !!<br>";
+            print "user does not exist/ password is wrong!<br>";
             $row = mysqli_fetch_assoc($result);
             if ($row['Password'] == $_GET["Password"]) {
-                print "You have the correct password";
-            } else {
-                print "Nice try.. ";
-            }
+                print "Your username does not exist!<br>";
+            } 
         } else {
             print "user does not exist/ password is wrong";
         }
@@ -40,7 +38,7 @@
     ?>
 
     <form action="login.php" method="get">
-        username: <input type="text" name="Username">
+        username: <input type="text" name="Username"><br>
         password: <input type="text" name="Password">
         <input type="submit" value="login" name="login">
     </form>
@@ -49,3 +47,5 @@
 </body>
 
 </html>
+<html>
+<body>
