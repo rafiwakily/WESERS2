@@ -10,3 +10,5 @@ Hello everyone, This is my new repository
     ADD code to your login.php
 - fill in the login.php file to present the user with a username/password form
 - handle this form to login OR give the correct messages (user does not exist/ password is wrong) !
+
+# NICE WORK !
