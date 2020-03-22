@@ -38,20 +38,14 @@
     $connection->close();
 
     ?>
-    <table>
-        <form action="login_page.php" method="get">
-            <tr>
-                <td> username: <input type="text" name="Username"></td>
-            </tr>
-            <tr>
-                <td> password: <input type="text" name="Password"></td>
-            </tr>
-            <tr>
-                <td><input type="submit" value="login" name="login"></td>
-            </tr>
-        </form>
 
-    </table>
+    <form action="login_page.php" method="get">
+        username: <input type="text" name="Username">
+        password: <input type="text" name="Password">
+        <input type="submit" value="login" name="login">
+    </form>
+
+
 </body>
 
 </html>
