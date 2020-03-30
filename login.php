@@ -23,18 +23,27 @@
 
         $result = $isUserThere->get_result();
 
-        if ($result->num_rows > 0) {
-            print "user does not exist/ password is wrong!<br>";
+        if ($result->num_rows === 1) {
+            print "We are checking your password <BR>";
             $row = mysqli_fetch_assoc($result);
-            if ($row['Password'] == $_GET["Password"]) {
-                print "Your username does not exist!<br>";
+            print $row["PERSON_ID"];
+            if ($row['Password'] === $_GET["Password"]) 
+            {
+                print "Ok.. you are successfully registered<br>";
             } 
-        } else {
-            print "user does not exist/ password is wrong";
-        }
-    }
-    $connection->close();
+        } else
+         {
 
+            print "Wrong password !";
+         }
+        }else 
+{ 
+            print "our username is not in our database !! please consider registering";
+            ?> <a href="Signup.php">Go to the Signup page</a>
+            <a href="login.php">Try again</a>
+    
+        <?php
+}
     ?>
 
     <form action="login.php" method="get">
