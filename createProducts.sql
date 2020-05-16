@@ -1,4 +1,4 @@
-USE baseer;
+USE rafi;
 CREATE TABLE Products(
     ID INT NOT NULL AUTO_INCREMENT,
     NAME varchar(50),
@@ -7,3 +7,4 @@ CREATE TABLE Products(
     Picture varchar(50),
     PRIMARY KEY (ID)
 );
+COMMIT;

@@ -54,7 +54,6 @@ include_once "sessionCheck.php"; ?>
         $rowCurrentId = $resultingUser->fetch_assoc();
         $_SESSION["CurrentUser"] = $rowCurrentId["PERSON_ID"];
         displayUserDetails($connection);
-        /* ?><a href="login_page.php">Go To the login page</a><?php */
       }
     } else {
        ?>
@@ -67,12 +66,12 @@ include_once "sessionCheck.php"; ?>
               <tr><td> UserName: <input type="text" name="Username" placeholder="Username" required></td></tr>
               <tr><td> Password: <input type="password" name="Password" placeholder="Password" required></td></tr>
         </table>
-            <select name="Country">
+        <select name="Country">
                 <?php
                 $stmt = $connection->prepare("SELECT * FROM countries");
                 $stmt->execute();
                 $result = $stmt->get_result();
-
+ 
                 if ($result->num_rows > 0) {
                   // output data of each row
                   while ($row = $result->fetch_assoc()) {
@@ -81,12 +80,11 @@ include_once "sessionCheck.php"; ?>
                 } else {
                   echo "0 results";
                 }
-
-      // $connection->close();
+ 
       ?>
             </select>
             <br>
-            <input type="submit" name="Register" id="SignupButton" value="Register">
+            <input type="submit" name="Register" value="Register">
         </form>
     <?php
     }
