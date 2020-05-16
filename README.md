@@ -1,14 +1,17 @@
-# WESERS2
+# WSERS2
 
-Hello everyone, This is my new repository
-# Add the following files
-    What we did in class: 
-- createPersons.sql -> change the db name to be your name
-- credentials.php -> change the db name as well to the same name you use above
-- Signup.php -> it should work just as given
 
-    ADD code to your login.php
-- fill in the login.php file to present the user with a username/password form
-- handle this form to login OR give the correct messages (user does not exist/ password is wrong) !
+This is a standard repository that we will use during isolation to show off our PHP code. We will include as well database script here !
 
-# NICE WORK !
+# This is another title 
+
+Finally I will push this online using the folowing steps:
+
+1. Stage changes
+2. Commit changes
+
+
+Useful shortcuts:
+
+Visual Studio Code: CTRL + SHIFT + P 
+Browser: F5 (Refresh the webpage)

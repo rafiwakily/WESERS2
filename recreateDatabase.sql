@@ -1,3 +1,6 @@
+DROP DATABASE rafi;
+COMMIT;
+
 CREATE DATABASE rafi;
 USE rafi;
 

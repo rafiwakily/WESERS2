@@ -46,5 +46,4 @@ if (count($_POST) > 0) {
   }
 }
 ?>
-</body>
-</html>
+</body></html>

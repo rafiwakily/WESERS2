@@ -45,9 +45,8 @@ include_once "displayUser.php";
 
               session_unset();
               session_destroy();
-              print "You have been logged out successfully";
+              print "You have been successfully logged out";
 
-              /*  ?> <a href="2tpifeProducts.php">Login</a><?php */
               ?>
                   <form action="<?php print $_SERVER["PHP_SELF"]; ?>" method="post">
                     <div>

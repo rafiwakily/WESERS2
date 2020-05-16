@@ -7,4 +7,3 @@ CREATE TABLE Products(
     Picture varchar(50),
     PRIMARY KEY (ID)
 );
-COMMIT;
