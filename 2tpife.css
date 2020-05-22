@@ -1,38 +1,59 @@
 #navigationBar {
   display: flex;
-  background-color: aquamarine;
+  background-color: rgb(0, 174, 255);
   justify-content: space-between;
+  
 }
 
 #navigationTittle {
-  background-color: aquamarine;
+  background-color:rgb(0, 174, 255);
   font-family: cursive;
   font-size: large;
   padding: 20px;
+  
 }
 
 #navigationLinks a {
   text-decoration: none;
   padding: 20px;
   font-size: large;
+   ruby-overhang: auto;
+  background:rgb(0,255,200);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  vertical-align: middle;
+  padding: 30px;
 }
 
 #navigationLinks {
+  text-decoration: none;
+  padding: 20px;
+  font-size: large;
   display: flex;
   align-items: center;
-  background-color: darkgoldenrod;
 }
 
 #navigationLanguage {
   display: flex;
   align-items: center;
-  background-color: darkgoldenrod;
+  background-color: rgb(0, 255, 200);
+  
 }
 
 #Signup {
-  display: flex;
   align-items: center;
-  background-color: red;
+  background-color:rgb(255, 0, 0);
+  background: rgb(0, 255, 200);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  vertical-align: middle;
+  padding: 40px;
 }
 
 #loginButton,
@@ -40,16 +61,15 @@
 #signupButton,
 #addButton,
 #deleteButton {
-  padding: 10px 10px;
-  font-size: 10px;
+  ruby-overhang: auto;
+  background: green;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 5px #999;
+  line-height: 40px;
+  vertical-align: middle;
+  padding: 30px;
 }
 
 #loginButton:hover,
@@ -57,7 +77,7 @@
 #addButton:hover,
 #deleteButton:hover,
 #logoutButton:hover {
-  background-color: #3e8e41;
+  background-color: rgb(255, 0, 0);
 }
 
 #loginButton:active,
@@ -65,24 +85,25 @@
 #addButton:active,
 #deleteButton:active,
 #logoutButton:active {
-  background-color: #3e8e41;
+  background-color: rgb(0, 162, 255);
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
 #login {
-  background-color: green;
+  background-color: rgb(0, 255, 255);
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 20px;
 }
 
 #login form {
-  background-color: yellowgreen;
+  background-color: rgb(0,255,200);
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+}
 }
 
 #login form div {
@@ -98,8 +119,15 @@
   justify-content: space-around;
   flex: wrap;
   align-items: center;
+  
+  
 }
 
 .Product {
   text-align: center;
+  
+}
+#h1 {
+  text-align: center;
+  color: red;
 }

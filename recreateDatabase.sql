@@ -23,7 +23,6 @@ INSERT INTO countries (COUNTRY_NAME) VALUES ('Afghanistan');
 INSERT INTO countries (COUNTRY_NAME) VALUES ('France');
 INSERT INTO countries (COUNTRY_NAME) VALUES ('Germany');
 INSERT INTO countries (COUNTRY_NAME) VALUES ('Luxembourg');
-INSERT INTO countries (COUNTRY_NAME) VALUES ('Pakistan');
 INSERT INTO countries (COUNTRY_NAME) VALUES ('Romania');
 INSERT INTO countries (COUNTRY_NAME) VALUES ('USA');
 

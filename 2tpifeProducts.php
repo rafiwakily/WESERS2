@@ -110,9 +110,6 @@ include_once "displayUser.php";
         <div id="Signup"><a href="Signup.php">Signup</a></div>
 <?php }
         } ?>
-        <div id="navigationLanguage">
-            <a href="">Language</a>
-        </div>
     </nav>
     <h1>These are our products</h1>
     <div id="AllProducts">

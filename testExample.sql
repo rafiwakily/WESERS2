@@ -10,10 +10,10 @@ CREATE TABLE Products (
     PRIMARY KEY (ID)
 );
 
-INSERT INTO Products (Name,Description,Price,Picture) VALUES("Carrots","Yummy vegetable", 1, "carrot.jpg");
-INSERT INTO Products (Name,Description,Price,Picture) VALUES("Tomatoe","Red vegetable that makes you healthy", 3, "tomato.jpg");
-INSERT INTO Products (Name,Description,Price,Picture) VALUES("Watermelon","Healthy fruit", 4, "watermelon.jpg");
-INSERT INTO Products (Name,Description,Price,Picture) VALUES("Apple","Best apple", 10, "apple.jpg");
-INSERT INTO Products (Name,Description,Price,Picture) VALUES("Grapes","Wonderful grapes", 1, "grapes.jpg");
+INSERT INTO Products (Name,Description,Price,Picture) VALUES("Delicuse","Frish", 1, "Carrot.jpg");
+INSERT INTO Products (Name,Description,Price,Picture) VALUES("With nice color","big", 3, "eggplant.jpg");
+INSERT INTO Products (Name,Description,Price,Picture) VALUES("watermelon","very Frish", 4, "melon.jpg");
+INSERT INTO Products (Name,Description,Price,Picture) VALUES("apple","red", 10, "apple.jpg");
+INSERT INTO Products (Name,Description,Price,Picture) VALUES("grapes","Frish", 1, "grapes.jpg");
 
 COMMIT;

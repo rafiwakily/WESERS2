@@ -18,24 +18,24 @@
 <body>
   <h1>Our products are the following</h1>
   <div class="Products">
-    <img src="melon.jpg">
-    <p>This is a melon</p>
+    <img src="apple.jpg">
+    <p>eggplante</p>
     <p>Name of the product</p>
-    <p>Price: 5 &euro;</p>
+    <p>Price: 1 &euro;</p>
   </div>
 
   <div class="Products">
-    <img src="carrot.jpg">
-    <p>This is a carrot</p>
+    <img src="Carrot.jpg">
+    <p>watermelon</p>
     <p>Name of the product</p>
-    <p>Price: 2 &euro;</p>
+    <p>Price: 80000 &euro;</p>
   </div>
 </body>
 
 </html>
 
 <?php include_once "credentials.php"; ?>
-<h1>These are our products</h1>
+<h1>The best products</h1>
     <div id="AllProducts">
     <?php
     $connection = mysqli_connect("localhost", "root", "", "testExample");

@@ -13,7 +13,8 @@ include_once "displayUser.php";
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='2tpife.css'>
 </head>
-
+<center><h1>Please contact us for more information<h1></center>
+<marquee><h1>FrishFruit@gmail.com</h1><marquee>
 <body>
 <script>
         window.onscroll = function() {myFunction()};
@@ -129,9 +130,6 @@ include_once "displayUser.php";
         <div id="Signup"><a href="Signup.php">Signup</a></div>
 <?php }
         } ?>
-        <div id="navigationLanguage">
-            <a href="">Language</a>
-        </div>
     </nav>
 
 </body>
