@@ -13,8 +13,22 @@ include_once "displayUser.php";
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='2tpife.css'>
 </head>
-<center><h1>Please contact us for more information<h1></center>
-<marquee><h1>FrishFruit@gmail.com</h1><marquee>
+
+<nav id="navigationBar">
+        <div id="navigationTittle">
+            <h1></h1>
+        </div>
+        <div id=navigationLinks>
+            <a href="2tpifeProducts.php">
+                <h1>Products</h1>
+            </a>
+            <a href="2tpifeAbout.php">
+                <h1>About</h1>
+            </a>
+        </div>
+<center><marquee><h1>AutoScout24_lu.com</h1><marquee></center>
+ 
+
 <body>
 <script>
         window.onscroll = function() {myFunction()};
@@ -123,15 +137,7 @@ include_once "displayUser.php";
                   </form>
             <?php
             } ?>
-        </div>
-        
-        <?php if (isset($_SESSION["UserLogged"])) {
-          if (!$_SESSION["UserLogged"]) { ?>
-        <div id="Signup"><a href="Signup.php">Signup</a></div>
-<?php }
-        } ?>
-    </nav>
+       
 
 </body>
-
 </html>

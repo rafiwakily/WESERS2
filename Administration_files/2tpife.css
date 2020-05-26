@@ -70,7 +70,6 @@
   line-height: 40px;
   vertical-align: middle;
   padding: 30px;
-  cursor: pointer;
 }
 
 #loginButton:hover,
@@ -113,7 +112,6 @@
   flex-wrap: wrap;
   padding: 5px;
   width: 100%;
-  
 }
 
 #AllProducts {

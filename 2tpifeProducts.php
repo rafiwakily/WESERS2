@@ -34,8 +34,11 @@ include_once "displayUser.php";
               session_unset();
               session_destroy();
               print "You have been successfully logged out";
-
               ?>
+            <div id="Login"><a href="2tpifeProducts.php">login</a></div>
+            <?php 
+
+              /* ?>
                   <form action="<?php print $_SERVER["PHP_SELF"]; ?>" method="post">
                     <div>
                       <div>
@@ -55,11 +58,12 @@ include_once "displayUser.php";
               $bDisplaySignup = true;
             } elseif (!$_SESSION["UserLogged"]) {
               $bDisplaySignup = true;
-            }
+            } */
 
-            if ($bDisplaySignup) { ?>
+          //  if ($bDisplaySignup) { ?>
+           <!-- <input type="submit" action="2tpifeProducts.php" value="Signup" id="SignupButton" method="post"> -->
             <div id="Signup"><a href="Signup.php">Signup</a></div>
-            <?php }
+            <?php 
 
             } elseif ($_SESSION["UserLogged"]) {
               //print "You have already been logged-in" . "<br>";
@@ -111,7 +115,7 @@ include_once "displayUser.php";
 <?php }
         } ?>
     </nav>
-    <h1>These are our products</h1>
+    <marquee><h1>These are our products</h1></marquee>
     <div id="AllProducts">
     <?php
     $products = $connection->prepare("SELECT * FROM products");
@@ -123,7 +127,7 @@ include_once "displayUser.php";
             <?php print $row["Description"]; ?>
             Price <?php print $row["Price"]; ?> &euro;
             <form action="2tpifeProducts.php" method="post">
-              <input type="hidden" name="BuyItem" value="<?php print $row["ID"]; ?>" >
+              <input type="hidden" name="BuyItem" value="<?php print $row["ID"]; ?>" > <br>
               <input type="submit" name="BuyItem" id="BuyItem" value="Buy">
             </form>
             <?php }

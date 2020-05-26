@@ -25,8 +25,8 @@
   </div>
 
   <div class="Products">
-    <img src="Carrot.jpg">
-    <p>watermelon</p>
+    <img src="Audi.jpg">
+    <p>i8</p>
     <p>Name of the product</p>
     <p>Price: 80000 &euro;</p>
   </div>

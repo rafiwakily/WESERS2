@@ -10,10 +10,10 @@ CREATE TABLE Products (
     PRIMARY KEY (ID)
 );
 
-INSERT INTO Products (Name,Description,Price,Picture) VALUES("Delicuse","Frish", 1, "Carrot.jpg");
-INSERT INTO Products (Name,Description,Price,Picture) VALUES("With nice color","big", 3, "eggplant.jpg");
-INSERT INTO Products (Name,Description,Price,Picture) VALUES("watermelon","very Frish", 4, "melon.jpg");
-INSERT INTO Products (Name,Description,Price,Picture) VALUES("apple","red", 10, "apple.jpg");
+INSERT INTO Products (Name,Description,Price,Picture) VALUES("i8","2020", 1, "Audi.jpg");
+INSERT INTO Products (Name,Description,Price,Picture) VALUES("With nice color","big", 3, "volvos.jpg");
+INSERT INTO Products (Name,Description,Price,Picture) VALUES("VW Passat","2020", 4, "vw_passat.jpg");
+INSERT INTO Products (Name,Description,Price,Picture) VALUES("Mercedes Benz","2020", 10, "benz.jpg");
 INSERT INTO Products (Name,Description,Price,Picture) VALUES("grapes","Frish", 1, "grapes.jpg");
 
 COMMIT;

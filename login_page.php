@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' type='text/css' media='screen' href='2tpife.css'>
+  <title>Document</title>
+</head>
+<body>
 <?php
 include_once "sessionCheck.php";
 include_once "credentials.php";
@@ -40,7 +49,11 @@ if (isset($_POST["Logout"])) {
     <form action="login_page.php" method="post">
         Username: <input type="text" name="Username" placeholder="Username" required><br>
         Password: <input type="password" name="Password" placeholder="Password" required><br>
-        <input type="submit" name="Login" value="Login">
+        <input type="submit" name="Login" id="loginButton" value="Login">
     </form>
 <?php
 } ?>
+  
+</body>
+</html>
+
