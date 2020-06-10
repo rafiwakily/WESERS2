@@ -10,7 +10,7 @@
 <?php function displayUserDetails($connection)
 {
   if (!isset($_SESSION["CurrentUser"])) {
-    print "You are trying to display a user details without loggin in";
+    print "You are trying to display a user details without loggin ";
   } else {
     $userFromMyDatabase = $connection->prepare("SELECT * FROM ppl WHERE PERSON_ID=?");
     $userFromMyDatabase->bind_param("i", $_SESSION["CurrentUser"]);
