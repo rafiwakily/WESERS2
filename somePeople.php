@@ -11,7 +11,7 @@
 <body>
     <form action="somePeople.php" method="post">
         Filter people by country:
-        <select name="countrySelect" id="">
+        <select name="countrySelect" id="countrySelect">
             <option value="0">No filter</option>
             <?php
             $sqlSelect = $connection->prepare("SELECT * FROM countries");

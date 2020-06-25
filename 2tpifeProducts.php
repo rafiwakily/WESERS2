@@ -15,10 +15,23 @@ include_once "displayUser.php";
 </head>
 
 <body>
+<script>
+        window.onscroll = function() {myFunction()};
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+</script>
     <nav id="navigationBar">
         <div id="navigationTittle">
             <h1></h1>
         </div>
+        
         <div id=navigationLinks>
             <a href="2tpifeProducts.php">
                 <h1>Products</h1>
@@ -26,19 +39,23 @@ include_once "displayUser.php";
             <a href="2tpifeAbout.php">
                 <h1>About</h1>
             </a>
+            
         </div>
         
         <div id="login">
-            <?php if (isset($_POST["Logout"])) {
+
+            <?php
+            if (isset($_POST["BuyItem"])) {
+              array_push($_SESSION["Basket"], $_POST["BuyItem"]);
+            }
+            if (isset($_POST["Logout"])) {
 
               session_unset();
               session_destroy();
-              print "You have been successfully logged out";
-              ?>
-            <div id="Login"><a href="2tpifeProducts.php">login</a></div>
-            <?php 
+              print "You have been logged out successfully";
 
-              /* ?>
+            
+              ?>
                   <form action="<?php print $_SERVER["PHP_SELF"]; ?>" method="post">
                     <div>
                       <div>
@@ -58,15 +75,18 @@ include_once "displayUser.php";
               $bDisplaySignup = true;
             } elseif (!$_SESSION["UserLogged"]) {
               $bDisplaySignup = true;
-            } */
+            }
+            if (!isset($_SESSION["Basket"])) {
+              $_SESSION["Basket"] = [];
+            }
+            
 
-          //  if ($bDisplaySignup) { ?>
-           <!-- <input type="submit" action="2tpifeProducts.php" value="Signup" id="SignupButton" method="post"> -->
+            if ($bDisplaySignup) { ?>
             <div id="Signup"><a href="Signup.php">Signup</a></div>
-            <?php 
+            <?php }
 
             } elseif ($_SESSION["UserLogged"]) {
-              //print "You have already been logged-in" . "<br>";
+      
               displayUserDetails($connection);
             } elseif (isset($_POST["Username"]) && isset($_POST["Password"])) {
               $userFromMyDatabase = $connection->prepare("SELECT * FROM ppl WHERE UserName=?");
@@ -79,6 +99,7 @@ include_once "displayUser.php";
                 if (password_verify($_POST["Password"], $row["Password"])) {
                   $_SESSION["UserLogged"] = true;
                   $_SESSION["CurrentUser"] = $row["PERSON_ID"];
+                  $_SESSION["Basket"] = [];
                   displayUserDetails($connection);
                 } else {
                   print "Password mismatched ! Please type your password correctly"; ?>
@@ -106,33 +127,54 @@ include_once "displayUser.php";
                     <input type="submit" name="Login" id="loginButton" value="Login">
                   </form>
             <?php
-            } ?>
+            }
+            ?>
         </div>
         
         <?php if (isset($_SESSION["UserLogged"])) {
           if (!$_SESSION["UserLogged"]) { ?>
         <div id="Signup"><a href="Signup.php">Signup</a></div>
+        
 <?php }
         } ?>
+        <div id="navigationLanguage">
+            <a href="">Language</a>
+        </div>
     </nav>
-    <marquee><h1>These are our products</h1></marquee>
+    <h1>R&W Automobile</h1>
+    <h2>
+Cars for Sale
+</h2>
+<h3>Find the right price, dealer and advice.</h3>
+    <div><a href="finishOrder.php">Basket = </a><?php print sizeof($_SESSION["Basket"]); ?>
+    </div>
+    <br>
+    <br>
+    
     <div id="AllProducts">
     <?php
     $products = $connection->prepare("SELECT * FROM products");
     $products->execute();
     $result = $products->get_result();
     while ($row = $result->fetch_assoc()) { ?>
+    
         <div class="Product">
-            <img src="<?php print $row["Picture"]; ?>">
-            <?php print $row["Description"]; ?>
-            Price <?php print $row["Price"]; ?> &euro;
+            <img src="<?php print $row["Picture"]; ?>"><br>
+            <?php print $row["Description"]; ?> <br>
+            Price <?php print $row["Price"]; ?> &euro;<br>
             <form action="2tpifeProducts.php" method="post">
-              <input type="hidden" name="BuyItem" value="<?php print $row["ID"]; ?>" > <br>
-              <input type="submit" name="BuyItem" id="BuyItem" value="Buy">
+              <input type="hidden" name="BuyItem" value="<?php print $row["ID"]; ?>" >
+              <input type="submit" name="BuyItemButton" id="BuyItem" value="Buy">
             </form>
+        </div>
             <?php }
     ?>
         </div>  
+        
+        <div class="footer">
+                    <h1>Copyright  2020</h1>
+                  </div>
+                  </div>
 </body>
 
 </html>
